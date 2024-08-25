@@ -33,6 +33,10 @@ function processArray(data) {
     };
 }
 
+app.get("/",(req,res) => {
+    res.send({success : "Hello World"})
+})
+
 app.post('/bfhl', (req, res) => {
     try {
         const result = processArray(req.body.data);
